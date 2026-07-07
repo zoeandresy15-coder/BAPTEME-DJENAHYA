@@ -66,6 +66,12 @@ body:has(.enveloppe.open) .container {
 z-index:8;
 }
 
+body:has(.enveloppe.open) .retour-btn {
+opacity:1;
+pointer-events:auto;
+transform:translateX(-50%) translateY(0);
+}
+
 .enveloppe {
 position:relative;
 width:min(86vw, 390px);
@@ -241,6 +247,39 @@ background .2s ease;
 transform:translateY(-2px);
 background:#755724;
 box-shadow:0 12px 28px rgba(140,107,53,.38);
+}
+
+.retour-btn {
+position:fixed;
+z-index:30;
+left:50%;
+bottom:24px;
+display:inline-flex;
+align-items:center;
+justify-content:center;
+min-width:min(88vw, 360px);
+min-height:64px;
+padding:0 34px;
+border:0;
+border-radius:999px;
+cursor:pointer;
+background:#fff7e8;
+color:#6b471d;
+font:700 1.35rem/1 Georgia, "Times New Roman", serif;
+box-shadow:0 18px 42px rgba(0,0,0,.32);
+opacity:0;
+pointer-events:none;
+transform:translateX(-50%) translateY(24px);
+transition:
+opacity .28s ease,
+transform .28s ease,
+background .2s ease;
+}
+
+.retour-btn:hover,
+.retour-btn:focus-visible {
+background:#ffe8b8;
+outline:0;
 }
 
 .map {

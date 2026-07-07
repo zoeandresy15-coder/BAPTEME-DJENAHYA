@@ -1,5 +1,6 @@
 const enveloppe = document.getElementById("enveloppe");
 const music = document.getElementById("music");
+const retour = document.getElementById("retour");
 
 let ouvert = false;
 
@@ -18,5 +19,13 @@ enveloppe.addEventListener("click",()=>{
         music.play();
 
     }
+
+});
+
+retour.addEventListener("click",()=>{
+
+    enveloppe.classList.remove("open");
+
+    ouvert=false;
 
 });
